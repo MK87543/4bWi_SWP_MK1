@@ -1,0 +1,90 @@
+*{
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }}
+
+
+
+div{
+    background-color: white;
+}
+
+.unterschrift{
+    background-color: black;
+    color: white;    
+    border: solid 2px;
+    text-align:center ;
+    border-radius: 5rem;
+    size: 20rem;
+    width: 100px;
+    height: 20px;
+    margin: auto;
+
+}
+
+.unterschrift:hover{
+    background-color: white;
+    color: black;
+    cursor: grab;
+
+}
+
+.subtitle{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2.5rem;
+
+
+}
+
+.head
+{
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: left;
+    padding: 2rem;
+    border: 5px;
+}
+
+
+
+.logo {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+ul li{
+    display: inline-block;
+    margin: 1rem;
+    text-align: center;
+
+}
+
+.sub_out{
+
+    margin: 1rem;
+    display: table;
+    border-bottom: solid 2px;
+    text-align: center;
+    width: 100%; 
+}
+
