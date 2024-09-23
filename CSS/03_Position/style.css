@@ -1,0 +1,42 @@
+div{
+    height: 100px;
+    width: 60vw;
+}
+
+.div1{
+    background-color: green;
+    position: absolute;
+    top: 20px;
+    width: 50vw;
+    border-style: solid;
+
+}
+
+.div2{
+    background-color: red;
+    position: fixed;
+    top: 100px;
+    width: 25vw;
+    border-style: solid;
+
+}
+
+.div3{
+    margin: 50vw;
+    background-color: blue;
+    position:sticky;
+    top: 70px;
+    width: 25vw;
+    border-style: solid;
+
+    
+}
+
+
+ul{
+    margin: 50vw;
+    width: 10vw;
+
+    position: relative;
+    border-style: solid;
+}
