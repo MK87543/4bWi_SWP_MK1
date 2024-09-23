@@ -3,3 +3,18 @@
 div{
     background-color: aquamarine;
 }
+
+/*id Selector */
+
+#header{
+    font-size: 2rem;
+}
+
+.subtitle{
+    color:blue;
+}
+
+
+#text p{
+background-color: green;
+}
