@@ -1,0 +1,26 @@
+.box{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+.container{
+    background-color: blue;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.top{
+    background-color: green;
+    border-style: solid;
+    justify-content: center;
+    width: 50px;
+    position:absolute;
+    right: 10px;
+
+}
+
