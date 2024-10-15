@@ -63,6 +63,7 @@ div{
     height: 400px;
     margin: 40px;
     background-color: blue;
+    position: relative;
 }
 
 .black{
@@ -77,8 +78,45 @@ div{
 .green{
     width: 40px;
     height: 40px;
-    position: relative;
+    position: absolute;
     bottom: 0px;
     right: 0px;
     background-color: green;
+}
+
+.boxlist{
+    border-style: solid;
+    align-items: center;
+    height: 40px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    
+
+    
+}
+
+.box{
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 40px;
+    height: 20px;
+    background-color: green;
+}
+
+.center{
+    background-color: red;
+    border-style: none;
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.all{
+    border-style: none;
+
 }
