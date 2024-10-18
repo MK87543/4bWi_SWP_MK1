@@ -1,0 +1,15 @@
+div{
+    border: 1px solid black;
+}
+
+.grid{
+    padding: 100px;
+}
+
+.left{
+    display: grid;
+    grid-template-columns: 100px 100px 100px ;
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 1px;
+    row-gap: 1px;
+}
