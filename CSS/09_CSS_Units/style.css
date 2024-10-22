@@ -1,0 +1,18 @@
+div {
+    height: 50px;
+    background-color: red;
+}
+
+.container1 {
+    width: 50%;
+}
+
+.container2 {
+    width: 50vw;
+}
+
+.main {
+    background-color: green;
+    padding: 10px;
+    height: 200px;
+}
