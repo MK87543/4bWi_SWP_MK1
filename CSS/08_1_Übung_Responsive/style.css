@@ -1,0 +1,54 @@
+div {
+    border-style: solid;
+    border-width: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-auto-rows: 50px;
+    column-gap: 10px;
+    justify-content: space-between;
+}
+
+
+.bottom {
+    padding: 20px;
+    border-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-auto-rows: 50px;
+    column-gap: 10px;
+    justify-content: center;
+}
+
+.bleft {
+    height: 400px;
+    background-color: aqua;
+}
+
+.bright {
+    height: 400px;
+    background-color: blue;
+}
+
+@media (max-width: 800px) {
+
+    .grid {
+        border-style: none;
+        display: grid;
+        grid-template-columns: 50px;
+        grid-auto-rows: 50px;
+        row-gap: 10px;
+        justify-content: left;
+    }
+
+    .bottom {
+        display: grid;
+        grid-template-columns: 400px;
+        grid-auto-rows: 400px;
+        row-gap: 10px;
+        justify-content: left;
+        padding-left: 0px;
+    }
+}
