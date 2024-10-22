@@ -1,0 +1,26 @@
+div {
+    border: 2px solid red;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 105px;
+    padding-left: 60px;
+}
+
+.textleft {
+    height: 105px;
+    gap: 50px;
+    color: grey;
+    display: flex;
+    justify-content: space-between;
+}
+
+.textleft div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
