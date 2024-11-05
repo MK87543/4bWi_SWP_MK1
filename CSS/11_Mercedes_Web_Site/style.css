@@ -6,7 +6,6 @@ div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-style: none;
     background-color: black;
     height: 74px;
     padding-left: 109px;
@@ -14,8 +13,8 @@ div {
 }
 
 .textleft {
-    height: 105px;
-    gap: 50px;
+    height: 74px;
+    gap: 25px;
     color: grey;
     border-color: aqua;
     display: flex;
@@ -29,6 +28,22 @@ div {
 }
 
 .iconright {
-    width: 320px;
+    display: flex;
+    margin-left: 150px;
+    width: 200px;
     border-color: blue;
+}
+
+.iconright img {
+    filter: gray;
+    width: 50px;
+    height: 50px;
+    border-color: blue;
+}
+
+.iconright svg {
+    width: 24px;
+    height: 24px;
+    fill: grey;
+    /* Changes the color of all SVG icons */
 }
