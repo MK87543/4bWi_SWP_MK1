@@ -29,21 +29,39 @@ div {
 
 .iconright {
     display: flex;
-    margin-left: 150px;
-    width: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 270px;
     border-color: blue;
 }
 
 .iconright img {
-    filter: gray;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     border-color: blue;
+    filter: invert(50%);
 }
 
-.iconright svg {
-    width: 24px;
-    height: 24px;
-    fill: grey;
-    /* Changes the color of all SVG icons */
+.iconright img:hover {
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+
+.login img {
+    width: 40px;
+    height: 40px;
+
+}
+
+.login {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: gray;
+}
+
+.iconright :hover {
+    color: white;
 }
