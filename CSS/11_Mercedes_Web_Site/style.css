@@ -13,6 +13,7 @@ div {
 }
 
 .textleft {
+    font-size: large;
     height: 74px;
     gap: 25px;
     color: grey;
@@ -64,4 +65,22 @@ div {
 
 .iconright :hover {
     color: white;
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+
+.content img {
+    width: 100%;
+    position: relative;
+}
+
+.uppertext {
+    margin-left: 70px;
+    position: absolute;
+    top: 300px;
+    font-size: 73px;
+    font-weight: lighter;
 }
