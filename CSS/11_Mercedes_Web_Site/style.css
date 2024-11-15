@@ -1,5 +1,5 @@
 div {
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .header {
@@ -20,6 +20,11 @@ div {
     border-color: aqua;
     display: flex;
     justify-content: space-between;
+}
+
+.textleft div :hover {
+    cursor: pointer;
+    color: white
 }
 
 .textleft div {
@@ -71,6 +76,13 @@ div {
     margin-right: 50px;
 }
 
+.logo :hover {
+    cursor: pointer;
+}
+
+.content {
+    position: relative;
+}
 
 .content img {
     width: 100%;
@@ -78,9 +90,105 @@ div {
 }
 
 .uppertext {
-    margin-left: 70px;
+    margin-left: 90px;
     position: absolute;
-    top: 300px;
-    font-size: 73px;
+    top: 250px;
+    font-size: 55px;
     font-weight: lighter;
+}
+
+
+.smalltext {
+    margin-left: 90px;
+    color: rgb(104, 104, 104);
+    position: absolute;
+    top: 350px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+
+
+.buttons {
+    display: flex;
+    gap: 7px;
+    margin-left: 71px;
+    position: absolute;
+    top: 520px;
+    font-size: 25px;
+    font-weight: lighter;
+    width: 380px
+}
+
+.leftbutton:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.rightbutton:hover {
+    cursor: pointer;
+    background-color: darkblue;
+}
+
+.leftbutton {
+    display: flex;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border-width: 1px;
+    padding: 13px;
+    font-size: smaller;
+
+}
+
+.rightbutton {
+    font-size: smaller;
+
+    border-color: black;
+    border-width: 1px;
+    padding: 13px;
+    color: white;
+    background-color: rgb(0, 117, 209);
+}
+
+
+.bubble {
+    background-color: black;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble :hover {
+    cursor: pointer;
+}
+
+.bubble svg {
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+}
+
+
+.contentwrapper {
+
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8727823893229166) 31%, rgba(255, 255, 255, 0) 85%);
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: linear-gradient(0deg, #fff, rgba(0, 0, 0, .001) 50%), linear-gradient(90deg, #fff, rgba(0, 0, 0, .001) 50%);
 }
