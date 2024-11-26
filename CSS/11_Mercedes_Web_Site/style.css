@@ -178,11 +178,6 @@ div {
 }
 
 
-.contentwrapper {
-
-    background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8727823893229166) 31%, rgba(255, 255, 255, 0) 85%);
-}
 
 .overlay {
     position: absolute;
