@@ -12,3 +12,15 @@ for (let i = 0; i < row; i++) {
 
     }
 }
+
+
+let summe = 0;
+
+for (let i = 0; i < 100; i++) {
+    if (i % 2 == 0) {
+        summe += i
+    }
+}
+
+console.log(summe);
+
