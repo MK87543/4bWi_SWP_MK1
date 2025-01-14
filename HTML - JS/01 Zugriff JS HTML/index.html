@@ -10,20 +10,48 @@
 </head>
 
 <body>
+    <div class="heading">
+        <h1>Calculator</h1>
 
-    <div class="input">
-        <input type="text" id="value1">
-        <input type="operator" id="op">
-        <input type="text" id="value2">
     </div>
 
+    <div class="wrapper">
+        <div class="input">
+            <div class="box1">
+                <input type="text" id="value1" placeholder="Number1">
+            </div>
 
-    <div class="button">
-        <button id="button">Calculate</button>
+            <div class="box2">
+                <input type="operator" id="op" placeholder="Operator">
+            </div>
+
+            <div class="box3">
+                <input type="text" id="value2" placeholder="Number2">
+            </div>
+
+
+            <div class="box4">
+                <div>=</div>
+            </div>
+
+            <div class="result" id="result">result</div>
+        </div>
+
+
+
+
+
+        <div class="button">
+            <button id="button">Calculate</button>
+        </div>
+
+
+        <div class="button">
+            <button id="clear">clear</button>
+        </div>
+
+
     </div>
-
-
-    <div id="result"></div>
 
 
 </body>
