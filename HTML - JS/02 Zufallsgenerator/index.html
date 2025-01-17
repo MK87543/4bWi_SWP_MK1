@@ -6,21 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
+    <h1>Random Number generator</h1>
 
     <div>
-        <input type="text" name="" id="field1">
-        <input type="text" name="" id="field2">
-    </div>
+        <div class="box">
+            <input type="text" name="" id="field1" placeholder="untere grenze">
+            <input type="text" name="" id="field2" placeholder="obere grenze">
+        </div>
 
-    <div>
-        <button>
-            Generate
-        </button>
+        <div>
+            <button onclick="generate()">
+                Generate
+            </button>
+        </div>
+
+        <div id="output">
+            <div id="randomNumber">
+                1234
+            </div>
+        </div>
     </div>
-    <div id="output">1234</div>
 
 
 </body>
