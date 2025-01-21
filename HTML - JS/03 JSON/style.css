@@ -1,0 +1,17 @@
+div {
+    border: 1px black solid;
+}
+
+body {
+    background-color: grey;
+}
+
+.wrapper {
+
+    display: flex;
+
+}
+
+h1 {
+    width: 100%;
+}
