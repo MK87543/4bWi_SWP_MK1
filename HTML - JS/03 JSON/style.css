@@ -6,12 +6,19 @@ body {
     background-color: grey;
 }
 
-.wrapper {
-
+.header {
     display: flex;
-
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
-h1 {
-    width: 100%;
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+th,
+td {
+    padding-left: 70px;
 }
