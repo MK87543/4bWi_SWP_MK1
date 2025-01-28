@@ -1,0 +1,60 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    gap: 20px;
+}
+
+.content input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 100px;
+    width: 200px;
+    font-size: large;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+.button button {
+    border-radius: 20px;
+
+    height: 100px;
+    width: 200px;
+    font-size: large;
+}
+
+#output {
+    border-radius: 20px;
+    border: 1px black solid;
+    height: 100px;
+    width: 200px;
+    font-size: large;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    background-color: grey;
+}
+
+.div {
+    background-color: grey;
+}
