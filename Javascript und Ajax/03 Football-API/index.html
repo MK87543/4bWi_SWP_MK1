@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="dropdown">
+            <button class="dropbtn" id="leagueButton">League</button>
+            <div class="dropdown-content" id="leagueDropdown">
+                <a href="#" data-league="bl1">Bundesliga</a>
+                <a href="#" data-league="bl2">2. Bundesliga</a>
+            </div>
+        </div>
+
+        <div class="headline">
+            <h1>Goalgetter</h1>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn" id="yearButton">Year</button>
+            <div class="dropdown-content" id="yearDropdown">
+                <a href="#" data-year="2022">2022</a>
+                <a href="#" data-year="2023">2023</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="content">
+        <div id="table">
+            <div id="goals"></div>
+            <div id="name"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
