@@ -1,0 +1,248 @@
+diff --git a/Javascript und Ajax/03 Football-API/index.html b/Javascript und Ajax/03 Football-API/index.html
+index 976255a..2810ab3 100644
+--- a/Javascript und Ajax/03 Football-API/index.html	
++++ b/Javascript und Ajax/03 Football-API/index.html	
+@@ -12,31 +12,25 @@
+ <body>
+ 
+     <div class="wrapper">
+-        <div class="dropdown">
+-            <button class="dropbtn" id="leagueButton">League</button>
+-            <div class="dropdown-content" id="leagueDropdown">
+-                <a href="#" data-league="bl1">Bundesliga</a>
+-                <a href="#" data-league="bl2">2. Bundesliga</a>
+-            </div>
++        <div class="League">
++            <input type="text" class="search" id="leagueSearch" placeholder="type in your League">
++            <button id="btnSearch">search</button>
+         </div>
++    </div>
+ 
+-        <div class="headline">
+-            <h1>Goalgetter</h1>
+-        </div>
++    <div class="headline">
++        <h1>Goalgetter</h1>
++    </div>
+ 
+-        <div class="dropdown">
+-            <button class="dropbtn" id="yearButton">Year</button>
+-            <div class="dropdown-content" id="yearDropdown">
++    <div class="dropdown">
++        <button class="dropbtn" id="yearButton">Year</button>
++        <div class="dropdown-content" id="yearDropdown">
+ 
+-            </div>
+         </div>
+-
+     </div>
++
+     <div class="content">
+-        <div id="table">
+-            <div id="goals"></div>
+-            <div id="name"></div>
+-        </div>
++        test
+ 
+     </div>
+ 
+diff --git a/Javascript und Ajax/03 Football-API/script.js b/Javascript und Ajax/03 Football-API/script.js
+index 4f62252..0e6bbe7 100644
+--- a/Javascript und Ajax/03 Football-API/script.js	
++++ b/Javascript und Ajax/03 Football-API/script.js	
+@@ -1,85 +1,58 @@
+-const leagueButton = document.getElementById("leagueButton");
+ const yearButton = document.getElementById("yearButton");
+-const leagueDropdown = document.getElementById("leagueDropdown");
+-const yearDropdown = document.getElementById("yearDropdown");
+-const selectionArea = document.querySelector(".selection-area");
+-
+-
+-leagueDropdown.addEventListener("click", (event) => {
+-    const selectedLeague = event.target.dataset.league;
+-    if (selectedLeague) {
+-        currentLeague = selectedLeague;
+-        leagueButton.textContent = event.target.textContent;
+-        if (currentYear) {
+-            loadData();
+-            loadData2();
+-        }
+-    }
+-});
+-
+-yearDropdown.addEventListener("click", (event) => {
+-    const selectedYear = event.target.dataset.year;
+-    if (selectedYear) {
+-        currentYear = selectedYear;
+-        yearButton.textContent = event.target.textContent;
+-        if (currentLeague) {
+-            loadData();
+-        }
+-    }
+-});
+-
+-const loadData = () => {
+-
+-    const url = "https://api.openligadb.de/getgoalgetters/" + currentLeague + "/" + currentYear;
+-    fetch(url)
+-        .then(result => result.json())
+-        .then(data => fillTable(data))
+-};
++let allLeagues = [];
++let filteredLeagues = [];
++
++document.getElementById("btnSearch").addEventListener("click", function () {
++    filterLeagues("Fußball")
++    printFilteredLeagues();
++})
+ 
+ 
+-fetch("https://api.openligadb.de/getavailableleagues")
+-    .then(response => response.json())
+-    .then(leagues => {
+-        const leagueDropdown = document.getElementById("leagueDropdown");
+-        leagues.forEach(league => {
+-            const item = document.createElement("a");
+-            item.href = "#";
+-            item.textContent = league.leagueName;
+-            item.dataset.league = league.leagueShortcut;
+-            item.addEventListener("click", (e) => {
+-                e.preventDefault();
+-                document.getElementById("leagueButton").textContent = league.leagueName;
+-            });
+-            leagueDropdown.appendChild(item);
+-        });
+-    })
+ 
+ 
+ function fetchAvailableYears(league) {
+     fetch("https://api.openligadb.de/getavailableyears/" + league)
+         .then(response => response.json())
+         .then(years => {
+-            const yearDropdown = document.getElementById("yearDropdown");
+-            yearDropdown.innerHTML = ""; // Clear previous years
+-            years.forEach(year => {
+-                const a = document.createElement("a");
+-                a.href = "#";
+-                a.textContent = year;
+-                a.dataset.year = year;
+-                a.addEventListener("click", function (e) {
+-                    e.preventDefault();
+-                    currentYear = this.dataset.year;
+-                    document.getElementById("yearButton").textContent = this.textContent;
+-                    yearDropdown.style.display = "none";
+-                    // Call function here if needed to load data
+-                });
+-                yearDropdown.appendChild(a);
+-            });
++
+         })
+         .catch(error => console.error("Error fetching years:", error));
+ }
+ 
+ 
++
++function fetchAllLeagues() {
++    fetch("https://api.openligadb.de/getavailableleagues")
++        .then(response => response.json())
++        .then(leagues => {
++            console.log("Leagues", leagues);
++            allLeagues = leagues;
++            filteredLeagues = leagues;
++            console.log("filtered", filteredLeagues);
++            printAllLeagues();
++
++        });
++}
++
++function printFilteredLeagues() {
++    console.log("filtered", filteredLeagues);
++
++
++}
++
++function printAllLeagues() {
++
++}
++
++function filterLeagues(search) {
++    filteredLeagues = allLeagues.filter(league => league.leagueName.toLowerCase().includes(search.toLowerCase()))
++
++
++
++}
++fetchAllLeagues();
++
++
+ /*
+   document.getElementById("leagueButton").addEventListener("click", function (e) {
+     e.stopPropagation();
+diff --git a/Javascript und Ajax/03 Football-API/style.css b/Javascript und Ajax/03 Football-API/style.css
+index 924e0b5..5fbee00 100644
+--- a/Javascript und Ajax/03 Football-API/style.css	
++++ b/Javascript und Ajax/03 Football-API/style.css	
+@@ -1,50 +1,3 @@
+-/*W3 schools*/
+-#leagueButton {
+-    padding: 10px;
+-    background-color: darkgray;
+-    color: white;
+-    border: none;
+-    cursor: pointer;
+-}
+-
+-/* Container for the dropdown items */
+-.dropdown {
+-    position: relative;
+-    display: inline-block;
+-}
+-
+-/* The dropdown content (hidden by default) */
+-.dropdown-content {
+-    display: none;
+-    position: absolute;
+-    background-color: #f1f1f1;
+-    min-width: 160px;
+-    max-height: 150px;
+-    /* Set maximum height */
+-    overflow-y: auto;
+-    /* Enable vertical scrolling */
+-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+-    z-index: 1;
+-}
+-
+-/* Show the dropdown when hovering over the container */
+-.dropdown:hover .dropdown-content {
+-    display: block;
+-}
+-
+-/* Basic style for each dropdown item */
+-.dropdown-content a {
+-    color: black;
+-    padding: 8px 12px;
+-    text-decoration: none;
+-    display: block;
+-}
+-
+-.dropdown-content a:hover {
+-    background-color: #ddd;
+-}
+-
+-
+ .wrapper {
+     display: flex;
+     justify-content: center;
+@@ -54,10 +7,10 @@
+ }
+ 
+ .wrapper button {
+-    width: 200px;
+-    height: 150px;
++    width: 100px;
++    height: 50px;
+     border-radius: 20px;
+-    font-size: xx-large;
++    font-size: large;
+ }
+ 
+ #table {
