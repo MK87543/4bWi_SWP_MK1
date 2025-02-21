@@ -30,7 +30,7 @@ function fetchAllLeagues() {
             allLeagues = leagues;
             filteredLeagues = leagues;
             console.log("filtered", filteredLeagues);
-            printAllLeagues();
+            printFilteredLeagues();
 
         });
 }
@@ -48,27 +48,21 @@ function printFilteredLeagues() {
     filteredLeagues.forEach(league => {
         const leagueItem = document.createElement('div');
         leagueItem.classList.add('league-item');
-        leagueItem.textContent = league.leagueName;
+        name = league.name =
+            leagueItem.textContent = league.leagueName;
         contentDiv.appendChild(leagueItem);
     });
 }
 
 
-function printAllLeagues() {
-
-}
 
 function filterLeagues(search) {
     filteredLeagues = allLeagues.filter(league => league.leagueName.toLowerCase().includes(search.toLowerCase()))
-
-
-
 }
-fetchAllLeagues();
 
 
 
-function printFilteredLeagues() {
+/*function printFilteredLeagues() {
     const contentDiv = document.querySelector('.content');
     contentDiv.innerHTML = '';
 
@@ -94,9 +88,6 @@ function printFilteredLeagues() {
         const row = document.createElement('tr');
         row.style.cursor = "pointer";
 
-        row.addEventListener("click", function () {
-            leagueClicked(league);
-        });
 
         const cell = document.createElement('td');
         cell.textContent = league.leagueSeason;
@@ -109,44 +100,6 @@ function printFilteredLeagues() {
 }
 
 
+*/
 
-function leagueClicked(league) {
-    fetchAvailableYears(league);
-}
-
-
-
-
-/*
-  document.getElementById("leagueButton").addEventListener("click", function (e) {
-    e.stopPropagation();
-    toggleDropdown("leagueDropdown");
-  });
-
-  document.getElementById("yearButton").addEventListener("click", function (e) {
-    e.stopPropagation();
-    toggleDropdown("yearDropdown");
-  }); */
-
-/* const fillTable = (data) => {
-    const header_goals = "<h2>Goals</h2>";
-    const header_name = "<h2>Name</h2>";
-    const spacer = "<div> ----------------</div>";
-
-    let goals_html = "";
-    let name_html = "";
-    data.forEach(element => {
-        goals_html += "<div> | " + element.goalCount + " </div>";
-        goals_html += spacer;
-        name_html += "<div> " + element.goalGetterName + " | </div>";
-        name_html += spacer;
-
-    });
-    document.getElementById("goals").innerHTML = header_goals + spacer + goals_html;
-    document.getElementById("name").innerHTML = header_name + spacer + name_html;
-
-};
- */
-
-
-
+fetchAllLeagues();
