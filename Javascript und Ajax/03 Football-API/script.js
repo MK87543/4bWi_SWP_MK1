@@ -12,6 +12,13 @@ document.getElementById("btnSearch").addEventListener("click", function () {
 });
 
 
+document.getElementById("leagueSearch").addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("btnSearch").click();
+    }
+});
+
 function fetchAllLeagues() {
     fetch("https://api.openligadb.de/getavailableleagues")
         .then(response => response.json())
