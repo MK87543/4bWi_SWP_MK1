@@ -14,8 +14,8 @@ export default function People() {
 
   return (
     <div>
-      <h1>People</h1>
-      <div className="w-40">
+    <h1 className="font-bold text-3xl w-full flex justify-center items-center mb-8">People</h1>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {people.map((person) => (
           <P_Card
             key={person.id}
