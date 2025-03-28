@@ -1,13 +1,18 @@
 import React from "react";
 import "./App.css";
-import People from "./components/PeopleContainer/People.jsx";
+import Page1 from "./components/pages/Page1.tsx";
+import Page2 from "./components/pages/Page2.tsx";
 
 function App() {
-  return (
-    <div className="container mx-auto px-4">
-      <People />
-    </div>
-  );
+  const [showFriends, setShowFriends] = React.useState(true);
+
+
+  return <div>
+    {
+      showFriends ? <Page1 /> : <Page2 />
+    }
+
+  </div>
 }
 
 
