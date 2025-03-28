@@ -42,7 +42,7 @@ export default function People() {
       </div>
 
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4b p-8 pt-32">
+      <div className="grid grid-cols-2 lg:grid-cols-4  gap-4b p-8 pt-32">
         {filteredPeople.map((person) => (
           <P_Card
             key={person.id}
